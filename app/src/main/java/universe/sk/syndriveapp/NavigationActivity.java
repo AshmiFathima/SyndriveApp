@@ -165,8 +165,10 @@ public class NavigationActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_logout) {
             firebaseAuth.signOut();
+            Intent i = new Intent(this,MainActivity.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             finish();
-            startActivity(new Intent(this,MainActivity.class));
+            startActivity(i);
 
         }else if(id == R.id.nav_conatctus){
 
